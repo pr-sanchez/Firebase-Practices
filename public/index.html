@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firebase Practices</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
 
@@ -33,6 +38,18 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <h1>Firebase Practices</h1>
+    <section class="section">
+      <div class="container">
+        <section id="signedOut">
+          <h1 class="title">Firebase Practices</h1>
+          <button type="button" class="button">Login</button>
+        </section>
+
+        <section id="signedIn" hidden="true">
+          <h1 class="title">Dashboard</h1>
+          <button type="button" class="button">Logout</button>
+        </section>
+      </div>
+    </section>
   </body>
 </html>

@@ -42,15 +42,31 @@
     <section class="section">
       <div class="container">
         <section id="signedOutSection">
-          <h1 class="title">Firebase Practices</h1>
-          <button id="signInButton" type="button" class="button">Login</button>
+          <div class="columns">
+            <h1 class="title column">Firebase Practices</h1>
+            <button id="signInButton" type="button" class="button">
+              Login
+            </button>
+          </div>
         </section>
 
         <section id="signedInSection" class="is-hidden">
-          <h1 class="title">Dashboard</h1>
-          <button id="signOutButton" type="button" class="button">
-            Logout
-          </button>
+          <div class="columns">
+            <h1 class="title column">Dashboard</h1>
+            <button id="signOutButton" type="button" class="button">
+              Logout
+            </button>
+          </div>
+
+          <div class="section columns is-vcentered">
+            <div id="userInfo" class="columns is-vcentered">
+              <figure class="column image is-128x128">
+                <img id="profilePhoto" class="is-rounded" />
+              </figure>
+
+              <h2 id="userEmail" class="column"></h2>
+            </div>
+          </div>
         </section>
       </div>
     </section>

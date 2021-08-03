@@ -2,6 +2,9 @@ const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 const body = document.body;
 
+const userEmail = document.getElementById("userEmail");
+const profilePhoto = document.getElementById("profilePhoto");
+
 const signedInSection = document.getElementById("signedInSection");
 const signedOutSection = document.getElementById("signedOutSection");
 
@@ -26,6 +29,8 @@ function handleChangeUserState(user) {
   if (user) {
     signedInSection.classList.remove("is-hidden");
     signedOutSection.classList.add("is-hidden");
+    userEmail.innerText = user.email;
+    profilePhoto.src = user.photoURL;
   } else {
     signedInSection.classList.add("is-hidden");
     signedOutSection.classList.remove("is-hidden");
